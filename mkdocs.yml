@@ -1,0 +1,9 @@
+site_name: "backstage-public-test-service"
+site_description: "This Java Springboot service is created using Backstage's template"
+
+nav:
+  - Introduction: index.md
+  - Page 1: page1.md
+
+plugins:
+  - techdocs-core

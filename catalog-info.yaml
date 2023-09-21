@@ -1,0 +1,16 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "backstage-public-test-service"
+  description: "This Java Springboot service is created using Backstage's template"
+  annotations:
+    github.com/project-slug: Sahana-Nagaraja/backstage-public-test-service
+    backstage.io/techdocs-ref: dir:.
+    gocd.org/pipelines: backstage-public-test-service
+    backstage.io/kubernetes-id: backstage-public-test-service
+spec:
+  type: service
+  providesApis:
+    - "backstage-public-test-service"
+  lifecycle: experimental
+  owner: "group:default/guests"

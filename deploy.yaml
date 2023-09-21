@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backstage-public-test-service
+  labels:
+    backstage.io/kubernetes-id: backstage-public-test-service
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: backstage-public-test-service
+  template:
+    metadata:
+      labels:
+        app: backstage-public-test-service
+        backstage.io/kubernetes-id: backstage-public-test-service
+    spec:
+      containers:
+        - name: backstage-public-test-service
+          image: sahanan05/backstage-public-test-service:latest
+          ports:
+            - containerPort: 8080
